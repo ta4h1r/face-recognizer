@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black"
+    tools:context=".EnrolActivity">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="150dp"
+        android:ems="10"
+        android:hint="Please enter name here..."
+        android:inputType="textPersonName"
+        android:outlineAmbientShadowColor="@color/Indigo"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/namebutton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="@color/Indigo"
+        android:onClick="onNameEnterClick"
+        android:text="Enter"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="5mm"
+        android:textColor="@color/White"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="@+id/namebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <Button
+        android:id="@+id/btn_capture"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/Blue"
+        android:text="capture"
+        android:textColor="@color/White"
+        app:layout_constraintBottom_toTopOf="@+id/tv_photoCounter"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="1280px"
+        android:layout_height="720px"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="452px"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name">
+
+        <SurfaceView
+            android:id="@+id/sv_media"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></SurfaceView>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_capture"
+        android:layout_width="444px"
+        android:layout_height="250px"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="127dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/DarkRed"
+        android:onClick="onOkClick"
+        android:text="@android:string/ok"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/tv_photoCounter"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout" />
+
+    <Button
+        android:id="@+id/btn_rej"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="127dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/DarkRed"
+        android:onClick="onRejectClick"
+        android:text="Reject"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/tv_photoCounter"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/tv_photoCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Photos taken: 0"
+        android:textColor="@color/White"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="@+id/namebutton"
+        app:layout_constraintEnd_toEndOf="@+id/namebutton"
+        app:layout_constraintStart_toStartOf="@+id/namebutton"
+        app:layout_constraintTop_toTopOf="@+id/namebutton" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_capture"
+        app:layout_constraintEnd_toEndOf="@+id/btn_capture"
+        app:layout_constraintStart_toStartOf="@+id/btn_capture"
+        app:layout_constraintTop_toTopOf="@+id/btn_capture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

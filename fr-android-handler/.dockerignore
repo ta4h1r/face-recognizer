@@ -1,0 +1,5 @@
+node_modules
+npm-debug.log
+ngrok_token.txt
+buildDockerImage.sh
+buildDockerImage.ps1

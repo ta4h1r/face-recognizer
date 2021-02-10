@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnrolActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="273dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Please enter name here..."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/namebutton"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="91dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:background="#FC8B37"
+        android:onClick="EnterName"
+        android:text="Enter"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nametextView"
+        android:layout_width="198dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="116dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:background="#FC8B37"
+        android:onClick="Capture"
+        android:text="capture"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="181dp"
+        android:layout_height="297dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nametextView">
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/buttonok"
+        android:layout_width="127dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="196dp"
+        android:background="#000000"
+        android:onClick="OK"
+        android:text="@android:string/ok"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonreject"
+        android:layout_width="127dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="196dp"
+        android:background="#000000"
+        android:onClick="Reject"
+        android:text="Reject"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="122dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:text="Photos taken: 0"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
